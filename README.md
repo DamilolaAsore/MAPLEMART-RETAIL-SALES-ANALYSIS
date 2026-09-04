@@ -99,5 +99,5 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 
 - Data Profile on Key Column on Order Items Table
 
-  [](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ORDER%20ITEMS%20GITHUB.png)
+  ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ORDER%20ITEMS%20GITHUB.png)
 
