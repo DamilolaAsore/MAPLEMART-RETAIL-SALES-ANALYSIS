@@ -98,5 +98,6 @@ The Employees table contains information about employees associated with MapleMa
 Data profiling in Power BI involves examining and analyzing data characteristics to understand its structure, detect patterns, identify potential issues, and spot outliers. This process supports informed decisions regarding data cleaning and transformation. Power BI offers various tools for effective data profiling, including column quality, column distribution, and column profiling features.
 
 - Data Profile on Key Column on Order Items Table
+
   
 
