@@ -101,3 +101,8 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 
   ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ORDER%20ITEMS%20GITHUB.png)
 
+**1. Basic Information**
+-	Table Name: Order Items Table
+- Number of Rows: 142,558 
+-	Number of Key Column: 8
+
