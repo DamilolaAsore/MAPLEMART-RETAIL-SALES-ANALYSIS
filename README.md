@@ -238,4 +238,50 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Full Name: 0
 
 ### Data Profile on Key Column on Employees Table
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/EMPLOYEES%20TABLE.png)
+
+#### Basic Information
+-	Table Name: Employees Table
+-	Number of Rows: 519
+-	Number of Key Columns: 14
+
+| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| Employee ID | Text | 519 | 519 | 100% | 0% | 0% | MAP-EMP-00002 | MAP-EMP-00803 |
+| Employee First Name | Text | 257 | 151 | 100% | 0% | 0% | AARON | YOLANDA |
+| Employee last Name | Text | 317 | 210 | 100% | 0% | 0% | ADAMS | ZUNIGA |
+| Employee Full Name | Text | 517 | 515 | 100% | 0% | 0% | AARON | YOLANDA |
+| Date of birth | Date | 513 | 507 | 100% | 0% | 0% | 27/08/1966 | 19/07/2008 |
+| Gender | Text | 2 | 0 | 100% | 0% | 0% | FEMALE | MALE |
+| Job Title | Text | 8 | 0 | 100% | 0% | 0% | ASSISTANT MANAGER | WAREHOUSE ASSOCIATE |
+| Department | Text | 5 | 0 | 100% | 0% | 0% | CUSTOMER SERVICE | SALES |
+| Employment Type | Text | 3 | 0 | 100% | 0% | 0% | CONTRACT | PART-TIME |
+| Salary | Decimal Number | 519 | 519 | 100% | 0% | 0% | 38214.98 | 129929.84 |
+| Hire Date | Date | 504 | 489 | 100% | 0% | 0% | 20/08/2006 | 21/03/2023 |
+| Store ID | Text | 228 | 62 | 100% | 0% | 0% | MAP-STR-0001 | MAP-STR-0250 |
+| Employment Status | Text | 3 | 0 | 100% | 0% | 0% | RESIGNED | ACTIVE |
+| Age | Whole Number | 43 | 0 | 100% | 0% | 0% | 18 | 60 |
+
+#### Data Quality Checks
+#### Missing Values:
+-	Employee ID: 0
+-	Employee First Name: 0
+-	Employee Last Name: 0
+-	Gender: 0
+-	Date of Birth: 0
+-	Employment Status: 0
+-	Store ID: 0
+-	Hire Date: 0
+-	Salary:0
+-	Age:0
+- Full Name: 0
+-	Employment Type: 0
+-	Job Title:0
+-	Department: 0
+
+## Data Profile on Key Column on Stores Table
 ![](
+
+
+
+
