@@ -313,6 +313,8 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 ##	Data Modelling
 Data modelling in Power BI involves organizing and structuring data to establish meaningful relationships between various tables. A well-designed data model is crucial for creating accurate and insightful reports.
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/DATA%20MODELLING.png)
+
 Active relationships were established between tables using common fields (keys), and the relationships diagram was reviewed to ensure that all connections were correctly defined. In Power BI, an active relationship serves as the default link between tables, which is used for filtering and calculations. When a relationship is created between two tables, Power BI automatically assumes it to be active unless specified otherwise. Active relationships are typically used for most calculations and visualizations.
 
 
