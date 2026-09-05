@@ -735,11 +735,43 @@ The major decisions made during the project were:
 
 **1. Created New Columns:**
 
-Several new columns were added to enhance the dataset and enable more detailed analysis. These new columns included:
+New columns were added to enhance the dataset and enable more detailed analysis. These new columns included:
 
-- Month Name: This column represents the month name in which each orders was made in. In Power BI, the Month Name Column was created on Orders table and gotten by creating a column that give the month name.
+- Month Name: This column represents the month name in which each orders and delivery was made in. In Power BI, the Month Name Column was created on Orders table and gotten by creating a column that give the month name.
 
 ##### DAX code for creating Month Name column
 ```Month Name=FORMAT(ORDERS[Date],""MMMM"")```
+
+-	Day: This column indicates the day of the week for orders and delivery. In Power BI, the Day Column was created on sales table and gotten by creating a column that give the Day.
+
+##### DAX code for creating Day Name Column
+```Day Name=FORMAT(ORDERS[Date],""DDDD"")```
+
+-	Year: This column indicates the year for orders and delivery. In Power BI, the Year Column was created on sales table and gotten by creating a column that give the Year.
+#####   DAX code for creating Year Column
+```Year=YEAR(ORDERS[Date].[Date])```
+
+**2. Created Measure**
+
+The following measure were created using various DAX code in order to aid our analysis for better and more detailed result.
+Key Performance Indicators (KPIs) were developed in Power BI using DAX to measure the overall financial and operational performance of the retail business.
+
+The KPI framework was built primarily from the ORDER ITEMS table because this table contains the detailed transactional information required to calculate sales, discounts, costs, and profitability.
+
+The main financial KPIs used in the analysis were:
+1.	Net Sales
+2.	Total Cost
+3.	Gross Profit
+4.	Gross Profit Margin (%)
+   
+These KPIs were supported by calculated transaction-level fields:
+-	Calculated Gross Sales
+-	Calculated Discount Amount
+-	Calculated Net Sales
+-	Calculated Total Cost
+
+- Calculated Gross Sales
+It represents the total sales value before discounts are applied. It is calculated at the individual order-item level using Quantity and Unit Price.
+
 
 
