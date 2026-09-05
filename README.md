@@ -201,7 +201,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Discount Percentage:0
 -	Shipping Cost:0
 
-### Data Profile on Key Column on Customer Table
+### Data Profile on Key Column on Customers Table
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/CUSTOMERS%20TABLE.png)
 
 #### Basic Information
@@ -237,3 +237,5 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Age:0
 -	Full Name: 0
 
+### Data Profile on Key Column on Employees Table
+![](
