@@ -600,7 +600,7 @@ An Age Group field was created to make customer segmentation easier.
 
 **6.	EMPLOYEES**
    
-###### EMPLOYEES — Name Validation
+##### EMPLOYEES — Name Validation
 
 The Full Name field was checked for missing values.
 Approximately 20 records contained 0 instead of a valid employee name.
@@ -731,5 +731,15 @@ The major decisions made during the project were:
 12.	The cleaned dataset was prepared for Power BI data modelling and dashboard development.
 
  
+ ### The following procedures were carried out during the data processing phase.
+
+**1. Created New Columns:**
+
+Several new columns were added to enhance the dataset and enable more detailed analysis. These new columns included:
+
+- Month Name: This column represents the month name in which each orders was made in. In Power BI, the Month Name Column was created on Orders table and gotten by creating a column that give the month name.
+
+##### DAX code for creating Month Name column
+```Month Name=FORMAT(ORDERS[Date],""MMMM"")```
 
 
