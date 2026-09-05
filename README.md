@@ -160,5 +160,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Sub Category: 0
 -	Suppliers: 0
 
+### Data Profile on Key Column on Orders Table
+![](
 
 
