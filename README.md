@@ -167,6 +167,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Table Name: Orders Table
 -	Number of Rows: 36.414
 -	Number of Key Columns: 13
+  
 | Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Order ID | Text | 36,414 | 36,414 | 100% | 0% | 0% | ORD-2026-000001 | ORD-2026-040000 |
@@ -201,5 +202,38 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Shipping Cost:0
 
 ### Data Profile on Key Column on Customer Table
-![](
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/CUSTOMERS%20TABLE.png)
+
+#### Basic Information
+-	Table Name: Customers Table
+-	Number of Rows: 15,000
+-	Number of Key Columns: 11
+
+| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| Customer ID | Text | 14,712 | 14,712 | 100% | 0% | 0% | CAN-CUS-000001 | CAN-CUS-015000 |
+| Customer First Name | Text | 676 | 31 | 100% | 0% | 0% | AARON | ZOE |
+| Customer last Name | Text | 999 | 20 | 100% | 0% | 0% | ABBOTT | ZUNIGA |
+| Gender | Text | 2 | 0 | 100% | 0% | 0% | FEMALE | MALE |
+| Date of birth | Date | 10,217 | 6,737 | 100% | 0% | 0% | 07/08/1956 | 03/08/2008 |
+| Cities | Text | 25 | 0 | 100% | 0% | 0% | BRANDON | WINNIPEG |
+| States | Text | 10 | 0 | 100% | 0% | 0% | ALBERTA | SASKATCHEWAN |
+| Registration Date | Date | 1,826 | 5 | 100% | 0% | 0% | 05/08/2021 | 05/08/2026 |
+| Loyalty Level | Text | 5 | 0 | 100% | 0% | 0% | DIAMOND | STANDARD |
+| Age | Whole Number | 53 | 0 | 100% | 0% | 0% | 18 | 70 |
+| Full Name | Text | 13,414 | 12,406 | 100% | 0% | 0% | AARON BRAY | ZOE YANG |
+
+#### Data Quality Checks
+#### Missing Values:
+-	Customer ID: 0
+-	Customer First Name: 0
+-	Customer Last Name: 0
+-	Gender: 0
+-	Date of Birth: 0
+-	Cities: 0
+-	States: 0
+-	Registration Date: 0
+-	Loyalty Level:0
+-	Age:0
+-	Full Name: 0
 
