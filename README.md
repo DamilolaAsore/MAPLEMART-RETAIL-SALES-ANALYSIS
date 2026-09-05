@@ -97,10 +97,10 @@ The Employees table contains information about employees associated with MapleMa
 ##	Data Profiling
 Data profiling in Power BI involves examining and analyzing data characteristics to understand its structure, detect patterns, identify potential issues, and spot outliers. This process supports informed decisions regarding data cleaning and transformation. Power BI offers various tools for effective data profiling, including column quality, column distribution, and column profiling features.
 
-- Data Profile on Key Column on Order Items Table
+### Data Profile on Key Column on Order Items Table
   ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ORDERS%20ITEMS%20TABLE.png)
 
-** Basic Information**
+#### Basic Information
 -	Table Name: Order Items Table
 - Number of Rows: 142,558 
 -	Number of Key Column: 8
@@ -108,16 +108,16 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 | Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Order Item ID | Text | 106,972 | 106,972 | 100% | 0% | 0% | ITEM_0000122 | ITEM-O141557 |
-| Order ID | Text | 984 | 968 | 100% | 0% | 0% | ORD-2026-000022 | ORD-2026-999999 |
-| Product ID | Text | 29 | 1 | 100% | 0% | 0% | MAP-PROD-000096 | MAP-PROD-999999 |
+| Order ID | Text | 984 | 968 | 100% | 0% | 0% | ORD-2026-000022 | ORD-2026-040000 |
+| Product ID | Text | 29 | 1 | 100% | 0% | 0% | MAP-PROD-000096 | MAP-PROD-040000 |
 | Quantity | Whole Number | 5 | 0 | 100% | 0% | 0% | 1 | 5 |
 | Unit Price | Decimal Number | 3,304 | 351 | 100% | 0% | 0% | 6.685 | 3090.97 |
 | Unit Cost | Decimal Number | 2,929 | 7 | 100% | 0% | 0% | 8.15 | 1799.97 |
 | Discount Price | Percentage | 4 | 0 | 100% | 0% | 0% | 5 | 20 |
 | Line Total | Decimal Number | 48,079 | 16,981 | 100% | 0% | 0% | 6.35 | 33527.07 |
 
-## Data Quality Checks ##
-### Missing Values: ###
+#### Data Quality Checks 
+#### Missing Values: 
 -	Order Items ID: 0
 -	Quantity: 0
 -	Order ID: 0
@@ -126,5 +126,39 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Unit Price: 0
 -	Unit Cost: 0
 -	Line Total: 0
+
+### Data Profile on Key Column on Product Table
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/PRODUCTS%20TABLE.png)
+
+#### Basic Information
+-	Table Name: Product Table
+-	Number of Rows: 476
+-	Number of Key Columns: 10
+  
+| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| Product ID | Text | 476 | 476 | 100% | 0% | 0% | MAP-PROD-000001 | MAP-PROD-002985 |
+| Product Name | Text | 476 | 476 | 100% | 0% | 0% | Acer 4K Smart TV | Wilson Yoga Mat |
+| Category | Text | 5 | 0 | 100% | 0% | 0% | Electronics | Sports & Outdoors |
+| Sub Category | Text | 64 | 0 | 100% | 0% | 0% | 4K Smart TV | Yoga Mat |
+| Brand | Text | 36 | 0 | 100% | 0% | 0% | ACER | WILSON |
+| Unit Cost | Decimal Number | 475 | 474 | 100% | 0% | 0% | 8.15 | 1799.31 |
+| Unit Price | Decimal Number | 466 | 465 | 100% | 0% | 0% | 447.59 | 1827.19 |
+| Suppliers | Text | 12 | 0 | 100% | 0% | 0% | ATLANTIC DISTRIBUTION | WESTERN CANADA WHOLESALE |
+| Product Status | Text | 4 | 0 | 100% | 0% | 0% | ACTIVE | SEASONAL |
+| Stock | Whole Number | 438 | 416 | 100% | 0% | 0% | 0 | 4974 |
+#### Data Quality Checks
+#### Missing Values:
+-	Product ID: 0
+-	Product Name: 0
+-	Unit Price: 0
+-	Unit Cost: 0
+-	Stock: 0
+-	Product Status: 0
+-	Brand: 0
+-	Category:0
+-	Sub Category: 0
+-	Suppliers: 0
+
 
 
