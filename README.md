@@ -318,6 +318,456 @@ Data modelling in Power BI involves organizing and structuring data to establish
 Active relationships were established between tables using common fields (keys), and the relationships diagram was reviewed to ensure that all connections were correctly defined. In Power BI, an active relationship serves as the default link between tables, which is used for filtering and calculations. When a relationship is created between two tables, Power BI automatically assumes it to be active unless specified otherwise. Active relationships are typically used for most calculations and visualizations.
 
 
+##	Data Cleaning and Processing
+The retail sales dataset was prepared for analysis and dashboard development in Microsoft Power BI. The dataset consists of six related tables:
+1.	PRODUCTS
+2.	STORES
+3.	ORDERS
+4.	ORDER_ITEMS
+5.	CUSTOMERS
+6.	EMPLOYEES
+   
+The objective of the cleaning process was to improve the accuracy, consistency, completeness, and reliability of the data before data modelling, DAX calculations, analysis, and dashboard development.
+The cleaning process was performed primarily in Power Query within Power BI.
+
+**1.	PRODUCTS**
+
+The Products table was checked for:
+-	Missing Product IDs
+-	Duplicate Product IDs
+-	Missing Product Names
+-	Placeholder values
+-	Invalid selling prices
+-	Negative numerical values
+-	Stock outliers
+-	Inconsistent category/subcategory values
+-	Blank values
+  
+Product IDs were reviewed to ensure that they could function as the unique identifier for products.
+Product names containing missing or placeholder values were investigated rather than being automatically treated as valid product names.
+Numerical fields such as Unit Cost, Selling Price and Stock were checked for inappropriate negative values and unreasonable values.
+The category and subcategory fields were standardized to improve consistency during analysis.
+
+**2.	STORES**
+
+The Stores table was checked for:
+-	Duplicate Store IDs
+-	Missing Store IDs
+-	Missing store names
+-	Inconsistent store types
+-	Invalid dates
+-	Missing province/city information
+-	Inconsistent Store Status values
+  
+Store IDs were retained as the unique identifier used to connect the Stores table with transactional data.
+
+**3.	ORDERS**
+
+##### ORDERS — Duplicate Order ID Cleaning
+
+Duplicate Order IDs were identified in the Orders table.
+The duplicate records were not necessarily exact duplicates because some duplicate Order IDs contained different information.
+Therefore, simply removing identical rows was not sufficient.
+The Orders table was:
+1.	Sorted by Order ID in ascending order.
+2.	Sorted by Delivery Date in descending order.
+3.	Duplicate Order IDs were then removed.
+   
+This approach retained the record with the latest Delivery Date for each duplicated Order ID.
+The purpose was to maintain one order-level record per Order ID while retaining the most recent delivery information.
+
+ ##### ORDERS — Date Cleaning
+ 
+The Order Date and Delivery Date fields were checked for:
+-	Blank values
+-	Null values
+-	Invalid dates
+-	Inconsistent date formats
+-	Dates that could not support year/month/day analysis
+  
+Rows containing unusable date information were removed where the missing date prevented reliable time-based analysis.
+This was particularly important because the dashboard required analysis by:
+- Year
+-	Month
+-	Day
+-	Monthly trends
+-	Year-over-year performance
+  
+After cleaning, additional date-related fields were created, including:
+-	Order Year
+-	Order Month
+-	Order Day
+-	Delivery Year
+-	Delivery Month
+-	Delivery Day
+  
+These fields supported time-based analysis in Power BI.
+
+##### ORDERS — Sales Channel Cleaning
+
+The Sales Channel field originally contained values such as:
+-	Click & Collect
+- In-Store
+-	Online
+  
+These values were standardized to ensure that the same sales channel was represented consistently throughout the dataset.
+The standardized terminology was selected to make the dashboard easier for business users to understand.
+
+##### ORDERS — Shipping Method Cleaning
+
+Shipping methods were reviewed and standardized.
+The dataset contained methods including:
+-	Canada Post
+-	FedEx
+-	Purolator
+-	Store Pickup
+-	UPS
+  
+These were retained as valid shipping methods because they represent different delivery/logistics options.
+Store Pickup was treated as a legitimate fulfilment method rather than a conventional courier service.
+
+##### ORDERS — Payment Method Cleaning
+
+Payment methods were reviewed for consistency.
+Payment methods included options such as:
+-	Credit Card
+-	Debit Card
+-	Google Pay
+-	Apple Pay
+  
+The values were retained because they represent legitimate payment channels.
+Credit Card and Debit Card were treated as separate payment methods because they represent different financial instruments and may be useful for payment-method analysis.
+
+ ##### ORDERS — Discount Percentage Cleaning
+ 
+The Discount Percentage field was checked for:
+-	Negative values
+-	Values above the logical maximum
+-	Blank values
+-	Invalid percentages
+  
+Negative discount percentages were identified and removed because a discount cannot logically be negative.
+Values exceeding the logical percentage range were also investigated and treated as invalid rather than being accepted as genuine discounts.
+
+This cleaning was important because Discount Percentage is used in the calculation of:
+Gross Sales → Discount Amount → Net Sales
+Invalid discount values could therefore distort revenue and profitability calculations.
+
+##### ORDERS — Shipping Cost Cleaning
+
+The Shipping Cost field was checked for negative values.
+Negative shipping costs were identified.
+Because shipping cost represents an expense incurred for fulfilment, negative values were considered invalid for the analysis.
+The invalid negative values were removed during the cleaning process.
+
+##### ORDERS — Tax Amount Validation
+
+The Tax Amount field was checked for missing values and invalid numerical values.
+No significant blank-value issue was identified in this field during the cleaning process.
+The field was retained for financial analysis.
+
+##### ORDERS — Order Total Validation
+
+The Order Total field was examined for:
+-	Negative values
+-	Extremely large values
+-	Blank values
+-	Potential outliers
+  
+Negative Order Total values were identified and treated as invalid for the primary sales analysis.
+Large values were investigated as potential outliers rather than automatically deleted solely because they were large.
+This distinction was important because a large transaction can be legitimate in a retail dataset.
+
+**4.	ORDER_ITEMS**
+
+##### ORDER_ITEMS — Duplicate Cleaning
+
+Duplicate Order Item records were identified during validation.
+Duplicate records were investigated to distinguish between:
+- Exact duplicates
+-	Legitimate repeated products within different transactions
+- Records associated with the same order
+-	Records that represented genuinely duplicated transactional rows
+  
+Records identified as duplicates were removed where they represented redundant records.
+The purpose was to prevent the same transaction from being counted more than once in revenue, quantity, cost, and profit calculations.
+
+ ##### ORDER_ITEMS — Missing Order IDs
+ 
+Order IDs in the Order Items table were compared with Order IDs in the Orders table.
+This validation was necessary because every order item should normally correspond to an existing order.
+Records with Order IDs that could not be matched to the Orders table were identified as unmatched/invalid transactional records.
+These records were reviewed during the cleaning process so that unmatched transactions would not incorrectly contribute to the sales model.
+
+##### ORDER_ITEMS — Product ID Validation
+
+Product IDs in Order Items were compared against Product IDs in the Products table.
+This validation was performed to identify transactional records referring to products that did not exist in the Products dimension.
+This is an important referential-integrity check because Product ID is used to connect transaction-level sales with product attributes such as:
+-	Product Name
+-	Category
+-	Subcategory
+-	Brand
+-	Product Status
+-	Unit Price
+  
+Unmatched Product IDs were identified and addressed during cleaning.
+
+##### ORDER_ITEMS — Quantity Validation
+The Quantity field was reviewed for:
+
+-	Blank values
+-	Zero values
+-	Negative quantities
+-	Unusually large quantities
+  
+Negative quantities were treated as invalid for normal sales transactions unless specifically representing a return transaction.
+The Returned field was considered when interpreting transaction records.
+
+##### ORDER_ITEMS — Unit Price Validation
+
+Unit Price was validated against Unit Cost and expected selling-price ranges.
+An IQR-based outlier analysis was performed.
+The calculated values included approximately:
+-	Q1 = 216.23
+-	Q3 = 661.16
+-	IQR = 444.93
+-	Upper Bound = 1,328.56
+  
+Values above the statistical upper bound were treated as potential outliers.
+However, an outlier was not automatically considered an error. The purpose of this analysis was to identify records requiring investigation.
+
+##### ORDER_ITEMS — Unit Price vs Unit Cost Validation
+
+Unit Price was compared with Unit Cost to identify transactions where products were apparently sold below cost.
+The validation produced approximately:
+
+-	45,425 records below cost
+-	80,399 records classified as above cost
+  
+This check was performed because selling below cost can have a significant effect on profitability.
+The results were treated as a validation finding rather than automatically deleting all below-cost transactions, because below-cost sales can sometimes occur legitimately due to promotions, clearance sales, discounts, or other commercial decisions.
+
+ ##### ORDER_ITEMS — Discount Percentage Cleaning
+ 
+The Discount Percentage field was checked for invalid values.
+Negative discount values were identified and removed.
+This ensured that item-level discount calculations would not produce misleading results.
+
+ ##### ORDER_ITEMS — Line Total Validation
+ 
+The Line Total field was validated using the transactional components:
+-	Quantity
+-	Unit Price
+-	Discount Percentage
+  
+The expected relationship was conceptually:
+Gross Line Sales = Quantity × Unit Price
+Discount Amount = Gross Line Sales × Discount Percentage
+Net Line Sales = Gross Line Sales − Discount Amount
+This validation helped confirm whether the transaction-level sales figures were mathematically reasonable.
+
+**5.	CUSTOMERS**
+
+##### CUSTOMERS — Duplicate Cleaning
+
+Duplicate Customer records were identified and removed where they represented duplicate customer records.
+Customer ID was treated as the principal identifier for customer-level analysis.
+This prevented customers from being counted multiple times in customer-related analysis.
+
+##### CUSTOMERS — Name 
+First Name and Last Name fields were standardized.
+A combined customer name was created from the first and last names where appropriate.
+
+##### CUSTOMERS — Gender Cleaning
+
+The Gender field was reviewed for inconsistent representations.
+Values were standardized so that the same gender category would not appear under multiple spellings or formats.
+
+##### CUSTOMERS — Age and Date of Birth Validation
+
+Age was checked against Date of Birth.
+Invalid age values were identified, including:
+
+-	Negative ages
+-	Zero values where inappropriate
+-	Blank ages
+-	Extremely high ages
+  
+Values such as 150 and 200 were identified as unrealistic for the intended customer analysis.
+Date of Birth was used as the more reliable basis for age-related analysis where appropriate.
+An Age Group field was created to make customer segmentation easier.
+
+**6.	EMPLOYEES**
+   
+###### EMPLOYEES — Name Validation
+
+The Full Name field was checked for missing values.
+Approximately 20 records contained 0 instead of a valid employee name.
+These values were treated as invalid placeholders rather than legitimate employee names.
+
+##### EMPLOYEES — Age Validation
+
+Employee Age was calculated/validated using Date of Birth.
+An Age Group field was created to support employee demographic analysis.
+This reduced reliance on potentially inconsistent manually entered age values.
+
+##### EMPLOYEES — Salary Cleaning
+
+Salary was checked for:
+- Negative values
+- Zero values
+-	Blank values
+-	Extreme outliers
+  
+An unusually high salary value of 999,999 was identified.
+An IQR analysis identified approximately 9 records containing this extreme value.
+Because this value appeared repeatedly and was far outside the normal salary distribution, it was treated as a data-quality outlier and reviewed accordingly.
+
+ ##### EMPLOYEES — Hiring Date Validation
+ 
+Hiring Date was checked against the current/project timeline.
+Approximately 19 future hiring dates were identified.
+Future hiring dates were treated as invalid because an employee cannot have a hiring date occurring after the relevant reporting period unless the dataset explicitly represents future hires.
+
+ ##### EMPLOYMENT STATUS Cleaning
+ 
+Employment Status values were reviewed and standardized.
+The main valid categories included:
+-	Active
+-	Resigned
+-	On Leave
+  
+Standardization ensured that employees could be reliably grouped according to their current employment status.
+
+
+
+Missing and Blank Values
+Blank and null values were systematically investigated across the six tables.
+The decision for each blank depended on the business meaning of the column.
+Not every blank was automatically replaced with zero or a text value.
+For example:
+•	Missing identifiers can compromise relationships.
+•	Missing dates can compromise time-series analysis.
+•	Missing numerical values can distort financial calculations.
+•	Missing descriptive values may sometimes be acceptable.
+Where a record could not be reliably used for the intended analysis because of critical missing information, it was removed.
+
+Data Type Standardization
+Data types were reviewed in Power Query.
+Fields were assigned appropriate data types, including:
+•	IDs → Text
+•	Names → Text
+•	Categories → Text
+•	Dates → Date
+•	Quantity → Whole Number
+•	Stock → Whole Number
+•	Prices → Decimal Number
+•	Costs → Decimal Number
+•	Percentages → Decimal Number
+•	Boolean/return indicators → Appropriate logical/text type
+Correct data types were essential for accurate Power BI calculations and visualizations.
+
+ Outlier Detection
+Outlier analysis was performed on important numerical fields.
+The purpose was not to delete every unusual value.
+Instead, outlier detection was used to distinguish between:
+1.	Genuine extreme business transactions
+2.	Data-entry errors
+3.	Placeholder values
+4.	Statistically unusual but potentially valid observations
+The IQR method was used for selected fields, including Unit Price and Salary.
+
+ Financial Validation
+Financial fields were cross-checked to ensure that the sales model was mathematically consistent.
+The major components included:
+Gross Sales
+Quantity × Unit Price
+Discount Amount
+Gross Sales × Discount Percentage
+Net Sales
+Gross Sales − Discount Amount
+Total Cost
+Quantity × Unit Cost
+Gross Profit
+Net Sales − Total Cost
+Gross Profit Margin
+Gross Profit ÷ Net Sales
+These calculations formed the foundation of the financial KPIs used in the Power BI dashboard.
+
+Final Data Validation
+After cleaning, the dataset was reviewed again to confirm:
+•	Duplicate records had been addressed.
+•	Invalid negative values had been removed.
+•	Critical blank values had been addressed.
+•	Invalid dates had been removed.
+•	Data types were correct.
+•	IDs were suitable for relationships.
+•	Transaction records could be linked to the relevant dimension tables.
+•	Financial calculations produced reasonable results.
+•	Time-based analysis worked correctly.
+•	The data was suitable for Power BI modelling.
+
+ Why the Cleaning Process Was Necessary
+The cleaning process was necessary because unclean data could produce:
+•	Incorrect revenue
+•	Incorrect costs
+•	Incorrect profit
+•	Incorrect product rankings
+•	Incorrect store performance
+•	Incorrect customer counts
+•	Incorrect employee analysis
+•	Incorrect monthly trends
+•	Incorrect yearly comparisons
+•	Broken relationships
+•	Duplicate transaction counts
+•	Misleading dashboard KPIs
+The objective was therefore not simply to make the dataset "look clean," but to ensure that the data was analytically reliable.
+
+ Key Cleaning Decisions
+The major decisions made during the project were:
+1.	Duplicate transaction records were investigated before removal.
+2.	Duplicate Order IDs were resolved by retaining the record with the latest Delivery Date.
+3.	Invalid negative financial values were removed where they were logically impossible.
+4.	Unrealistic demographic values were identified and corrected/removed.
+5.	Future employee hiring dates were identified as invalid.
+6.	Extreme numerical values were investigated using outlier analysis.
+7.	Product and Order Item IDs were checked for referential integrity.
+8.	Missing dates that prevented reliable time analysis were removed.
+9.	Sales channels, shipping methods, payment methods, and categorical fields were standardized.
+10.	Financial calculations were validated using Quantity, Unit Price, Unit Cost, and Discount Percentage.
+11.	Blank-year records were investigated when they caused discrepancies between KPIs and trend visuals.
+12.	The cleaned dataset was prepared for Power BI data modelling and dashboard development.
+
+ Data Quality Principles Applied
+The cleaning process followed five major data-quality principles:
+Accuracy
+Values were checked to ensure they represented reasonable business information.
+Completeness
+Missing and blank values were identified and addressed.
+Consistency
+Categories, dates, identifiers, and text fields were standardized.
+Validity
+Values were checked against logical and business rules.
+Integrity
+Relationships between transactional and reference tables were validated.
+
+Final Outcome
+The six-table retail dataset was transformed from a raw dataset into a structured analytical dataset suitable for Power BI.
+The cleaned data provided a reliable foundation for:
+•	Data modelling
+•	Relationship creation
+•	DAX calculations
+•	Sales analysis
+•	Product performance analysis
+•	Store performance analysis
+•	Customer analysis
+•	Employee analysis
+•	Profitability analysis
+•	Time-series analysis
+•	KPI development
+•	Interactive dashboard development
+The cleaning stage was therefore completed before proceeding to the modelling and visualization stages.
 
 
 
