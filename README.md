@@ -640,9 +640,7 @@ The main valid categories included:
   
 Standardization ensured that employees could be reliably grouped according to their current employment status.
 
-
-
-Missing and Blank Values
+##### Missing and Blank Values
 Blank and null values were systematically investigated across the six tables.
 The decision for each blank depended on the business meaning of the column.
 Not every blank was automatically replaced with zero or a text value.
