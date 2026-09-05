@@ -641,32 +641,39 @@ The main valid categories included:
 Standardization ensured that employees could be reliably grouped according to their current employment status.
 
 ##### Missing and Blank Values
+
 Blank and null values were systematically investigated across the six tables.
 The decision for each blank depended on the business meaning of the column.
 Not every blank was automatically replaced with zero or a text value.
 For example:
-•	Missing identifiers can compromise relationships.
-•	Missing dates can compromise time-series analysis.
-•	Missing numerical values can distort financial calculations.
-•	Missing descriptive values may sometimes be acceptable.
+
+-	Missing identifiers can compromise relationships.
+-	Missing dates can compromise time-series analysis.
+-	Missing numerical values can distort financial calculations.
+-	Missing descriptive values may sometimes be acceptable.
+  
 Where a record could not be reliably used for the intended analysis because of critical missing information, it was removed.
 
-Data Type Standardization
+##### Data Type Standardization
+
 Data types were reviewed in Power Query.
 Fields were assigned appropriate data types, including:
-•	IDs → Text
-•	Names → Text
-•	Categories → Text
-•	Dates → Date
-•	Quantity → Whole Number
-•	Stock → Whole Number
+
+-	IDs → Text
+-	Names → Text
+-	Categories → Text
+-	Dates → Date
+-	Quantity → Whole Number
+-	Stock → Whole Number
 •	Prices → Decimal Number
 •	Costs → Decimal Number
 •	Percentages → Decimal Number
 •	Boolean/return indicators → Appropriate logical/text type
+
 Correct data types were essential for accurate Power BI calculations and visualizations.
 
- Outlier Detection
+##### Outlier Detection
+
 Outlier analysis was performed on important numerical fields.
 The purpose was not to delete every unusual value.
 Instead, outlier detection was used to distinguish between:
@@ -674,56 +681,42 @@ Instead, outlier detection was used to distinguish between:
 2.	Data-entry errors
 3.	Placeholder values
 4.	Statistically unusual but potentially valid observations
+   
 The IQR method was used for selected fields, including Unit Price and Salary.
 
- Financial Validation
+##### Financial Validation
+
 Financial fields were cross-checked to ensure that the sales model was mathematically consistent.
 The major components included:
-Gross Sales
-Quantity × Unit Price
-Discount Amount
-Gross Sales × Discount Percentage
-Net Sales
-Gross Sales − Discount Amount
-Total Cost
-Quantity × Unit Cost
-Gross Profit
-Net Sales − Total Cost
-Gross Profit Margin
-Gross Profit ÷ Net Sales
+
+- Gross Sales= Quantity × Unit Price
+- Discount Amount= Gross Sales × Discount Percentage
+- Net Sales= Gross Sales − Discount Amount
+- Total Cost= Quantity × Unit Cost
+- Gross Profit= Net Sales − Total Cost
+- Gross Profit Margin= Gross Profit ÷ Net Sales
+  
 These calculations formed the foundation of the financial KPIs used in the Power BI dashboard.
 
-Final Data Validation
+##### Final Data Validation
+
 After cleaning, the dataset was reviewed again to confirm:
-•	Duplicate records had been addressed.
-•	Invalid negative values had been removed.
-•	Critical blank values had been addressed.
-•	Invalid dates had been removed.
-•	Data types were correct.
-•	IDs were suitable for relationships.
-•	Transaction records could be linked to the relevant dimension tables.
-•	Financial calculations produced reasonable results.
-•	Time-based analysis worked correctly.
-•	The data was suitable for Power BI modelling.
+-	Duplicate records had been addressed.
+-	Invalid negative values had been removed.
+-	Critical blank values had been addressed.
+-	Invalid dates had been removed.
+-	Data types were correct.
+-	IDs were suitable for relationships.
+-	Transaction records could be linked to the relevant dimension tables.
+-	Financial calculations produced reasonable results.
+-	Time-based analysis worked correctly.
+-	The data was suitable for Power BI modelling.
 
- Why the Cleaning Process Was Necessary
-The cleaning process was necessary because unclean data could produce:
-•	Incorrect revenue
-•	Incorrect costs
-•	Incorrect profit
-•	Incorrect product rankings
-•	Incorrect store performance
-•	Incorrect customer counts
-•	Incorrect employee analysis
-•	Incorrect monthly trends
-•	Incorrect yearly comparisons
-•	Broken relationships
-•	Duplicate transaction counts
-•	Misleading dashboard KPIs
-The objective was therefore not simply to make the dataset "look clean," but to ensure that the data was analytically reliable.
-
- Key Cleaning Decisions
+ 
+ ##### Key Cleaning Decisions
+ 
 The major decisions made during the project were:
+
 1.	Duplicate transaction records were investigated before removal.
 2.	Duplicate Order IDs were resolved by retaining the record with the latest Delivery Date.
 3.	Invalid negative financial values were removed where they were logically impossible.
@@ -737,38 +730,6 @@ The major decisions made during the project were:
 11.	Blank-year records were investigated when they caused discrepancies between KPIs and trend visuals.
 12.	The cleaned dataset was prepared for Power BI data modelling and dashboard development.
 
- Data Quality Principles Applied
-The cleaning process followed five major data-quality principles:
-Accuracy
-Values were checked to ensure they represented reasonable business information.
-Completeness
-Missing and blank values were identified and addressed.
-Consistency
-Categories, dates, identifiers, and text fields were standardized.
-Validity
-Values were checked against logical and business rules.
-Integrity
-Relationships between transactional and reference tables were validated.
-
-Final Outcome
-The six-table retail dataset was transformed from a raw dataset into a structured analytical dataset suitable for Power BI.
-The cleaned data provided a reliable foundation for:
-•	Data modelling
-•	Relationship creation
-•	DAX calculations
-•	Sales analysis
-•	Product performance analysis
-•	Store performance analysis
-•	Customer analysis
-•	Employee analysis
-•	Profitability analysis
-•	Time-series analysis
-•	KPI development
-•	Interactive dashboard development
-The cleaning stage was therefore completed before proceeding to the modelling and visualization stages.
-
-
-
-
+ 
 
 
