@@ -161,6 +161,45 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Suppliers: 0
 
 ### Data Profile on Key Column on Orders Table
-![](
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ORDERS%20TABLE.png)
 
+#### Basic Information
+-	Table Name: Orders Table
+-	Number of Rows: 36.414
+-	Number of Key Columns: 13
+| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| Order ID | Text | 36,414 | 36,414 | 100% | 0% | 0% | ORD-2026-000001 | ORD-2026-040000 |
+| Customer ID | Text | 13,627 | 3,304 | 100% | 0% | 0% | CAN-CUS-000001 | CAN-CUS-015000 |
+| Store ID | Text | 250 | 0 | 100% | 0% | 0% | MAP-STR-0001 | MAP-STR-0250 |
+| Employee ID | Text | 394 | 0 | 100% | 0% | 0% | MAP-EMP-00001 | MAP-EMP-00802 |
+| Order Date | Date | 1,461 | 0 | 100% | 0% | 0% | 06/08/2022 | 05/08/2026 |
+| Delivery Date | Date | 1,470 | 0 | 100% | 0% | 0% | 07/08/2022 | 15/08/2026 |
+| Order Status | Text | 5 | 0 | 100% | 0% | 0% | CANCELLED | SHIPPED |
+| Sales Channel | Text | 3 | 0 | 100% | 0% | 0% | CLICK & COLLECT | IN-STORE |
+| Shipping Method | Text | 5 | 0 | 100% | 0% | 0% | UPS | STORE PICKUP |
+| Payment Method | Text | 6 | 0 | 100% | 0% | 0% | APPLE PAY | PAYPAL |
+| Discount Percentage | Percentage | 6 | 0 | 100% | 0% | 0% | 0 | 25 |
+| Shipping Cost | Decimal Number | 2,922 | 283 | 100% | 0% | 0% | 0 | 34.45 |
+| Tax Amount | Decimal Number | 7,817 | 358 | 100% | 0% | 0% | 2.89 | 72.49 |
+| Order Total | Decimal Number | 33,883 | 31,483 | 100% | 0% | 0% | 20.01 | 2499.81 |
+
+#### Data Quality Checks
+#### Missing Values:
+-	Order ID: 0
+-	Store ID: 0
+-	Employee ID: 0
+-	Customer ID: 0
+-	Order Date: 0
+-	Delivery Date: 0
+-	Payment Method: 0
+-	Order Total: 0
+-	Sales Channel:0
+-	Shipping Method:0
+-	Tax Amount: 0
+-	Discount Percentage:0
+-	Shipping Cost:0
+
+### Data Profile on Key Column on Customer Table
+![](
 
