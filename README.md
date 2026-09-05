@@ -105,7 +105,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 - Number of Rows: 142,558 
 -	Number of Key Column: 8
 
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value |  Valid Value% | Error Value% |  Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Order Item ID | Text | 106,972 | 106,972 | 100% | 0% | 0% | ITEM_0000122 | ITEM-O141557 |
 | Order ID | Text | 984 | 968 | 100% | 0% | 0% | ORD-2026-000022 | ORD-2026-040000 |
@@ -127,15 +127,15 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Unit Cost: 0
 -	Line Total: 0
 
-### Data Profile on Key Column on Product Table
+### Data Profile on Key Column on Products Table
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/PRODUCTS%20TABLE.png)
 
 #### Basic Information
--	Table Name: Product Table
+-	Table Name: Products Table
 -	Number of Rows: 476
 -	Number of Key Columns: 10
   
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value | Valid Value% | Error Value% | Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Product ID | Text | 476 | 476 | 100% | 0% | 0% | MAP-PROD-000001 | MAP-PROD-002985 |
 | Product Name | Text | 476 | 476 | 100% | 0% | 0% | Acer 4K Smart TV | Wilson Yoga Mat |
@@ -147,6 +147,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 | Suppliers | Text | 12 | 0 | 100% | 0% | 0% | ATLANTIC DISTRIBUTION | WESTERN CANADA WHOLESALE |
 | Product Status | Text | 4 | 0 | 100% | 0% | 0% | ACTIVE | SEASONAL |
 | Stock | Whole Number | 438 | 416 | 100% | 0% | 0% | 0 | 4974 |
+
 #### Data Quality Checks
 #### Missing Values:
 -	Product ID: 0
@@ -156,7 +157,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Stock: 0
 -	Product Status: 0
 -	Brand: 0
--	Category:0
+-	Category: 0
 -	Sub Category: 0
 -	Suppliers: 0
 
@@ -168,7 +169,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Number of Rows: 36.414
 -	Number of Key Columns: 13
   
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value | Valid Value% |  Error Value% |  Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Order ID | Text | 36,414 | 36,414 | 100% | 0% | 0% | ORD-2026-000001 | ORD-2026-040000 |
 | Customer ID | Text | 13,627 | 3,304 | 100% | 0% | 0% | CAN-CUS-000001 | CAN-CUS-015000 |
@@ -195,11 +196,11 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Delivery Date: 0
 -	Payment Method: 0
 -	Order Total: 0
--	Sales Channel:0
--	Shipping Method:0
+-	Sales Channel: 0
+-	Shipping Method: 0
 -	Tax Amount: 0
--	Discount Percentage:0
--	Shipping Cost:0
+-	Discount Percentage: 0
+-	Shipping Cost: 0
 
 ### Data Profile on Key Column on Customers Table
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/CUSTOMERS%20TABLE.png)
@@ -209,7 +210,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Number of Rows: 15,000
 -	Number of Key Columns: 11
 
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value | Valid Value% | Error Value% |  Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Customer ID | Text | 14,712 | 14,712 | 100% | 0% | 0% | CAN-CUS-000001 | CAN-CUS-015000 |
 | Customer First Name | Text | 676 | 31 | 100% | 0% | 0% | AARON | ZOE |
@@ -233,8 +234,8 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Cities: 0
 -	States: 0
 -	Registration Date: 0
--	Loyalty Level:0
--	Age:0
+-	Loyalty Level: 0
+-	Age: 0
 -	Full Name: 0
 
 ### Data Profile on Key Column on Employees Table
@@ -245,7 +246,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Number of Rows: 519
 -	Number of Key Columns: 14
 
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value | Valid Value% | Error Value% | Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Employee ID | Text | 519 | 519 | 100% | 0% | 0% | MAP-EMP-00002 | MAP-EMP-00803 |
 | Employee First Name | Text | 257 | 151 | 100% | 0% | 0% | AARON | YOLANDA |
@@ -273,14 +274,50 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Store ID: 0
 -	Hire Date: 0
 -	Salary:0
--	Age:0
+-	Age: 0
 - Full Name: 0
 -	Employment Type: 0
--	Job Title:0
+-	Job Title: 0
 -	Department: 0
 
-## Data Profile on Key Column on Stores Table
-![](
+### Data Profile on Key Column on Stores Table
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/STORES%20TABLE.png)
+
+#### Basic Information
+-	Table Name: Stores Table
+-	Number of Rows: 222
+-	Number of Key Columns: 8
+
+| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| Store ID | Text | 222 | 222 | 100% | 0% | 0% | MAP-STR-0001 | MAP-STR-0250 |
+| Store Name | Text | 25 | 0 | 100% | 0% | 0% | MAPLEMART BRANDON | MAPLEMART WINNIPEG |
+| Store Type | Text | 5 | 0 | 100% | 0% | 0% | WAREHOUSE | SUPERSTORE |
+| Province | Text | 10 | 0 | 100% | 0% | 0% | ALBERTA | SASKATCHEWAN |
+| City | Text | 25 | 0 | 100% | 0% | 0% | BRANDON | WINNIPEG |
+| Opening Date | Date | 221 | 220 | 100% | 0% | 0% | 29/09/2006 | 07/06/2025 |
+| Manager Name | Text | 204 | 203 | 100% | 0% | 0% | ABIGAIL MONTGOMERY | ZACHARY ROBINSON |
+| Store Status | Text | 2 | 0 | 100% | 0% | 0% | ACTIVE | CLOSED |
+
+#### Data Quality Checks
+#### Missing Values:
+-	Store ID: 0
+-	Store Name: 0
+-	Manager Name: 0
+-	Store Status: 0
+-	Opening Date: 0
+-	Province: 0
+-	City: 0
+-	Store Type: 0
+
+##	Data Modelling
+Data modelling in Power BI involves organizing and structuring data to establish meaningful relationships between various tables. A well-designed data model is crucial for creating accurate and insightful reports.
+
+Active relationships were established between tables using common fields (keys), and the relationships diagram was reviewed to ensure that all connections were correctly defined. In Power BI, an active relationship serves as the default link between tables, which is used for filtering and calculations. When a relationship is created between two tables, Power BI automatically assumes it to be active unless specified otherwise. Active relationships are typically used for most calculations and visualizations.
+
+
+
+
 
 
 
