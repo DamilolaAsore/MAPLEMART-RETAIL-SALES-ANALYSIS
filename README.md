@@ -288,7 +288,7 @@ Data profiling in Power BI involves examining and analyzing data characteristics
 -	Number of Rows: 222
 -	Number of Key Columns: 8
 
-| Column Name | Data Type | Distinct Value | Unique Value | % Valid Value | % Error Value | % Empty Value | Minimum | Maximum |
+| Column Name | Data Type | Distinct Value | Unique Value |  Valid Value% | Error Value% |  Empty Value% | Minimum | Maximum |
 |---|---|---:|---:|---:|---:|---:|---|---|
 | Store ID | Text | 222 | 222 | 100% | 0% | 0% | MAP-STR-0001 | MAP-STR-0250 |
 | Store Name | Text | 25 | 0 | 100% | 0% | 0% | MAPLEMART BRANDON | MAPLEMART WINNIPEG |
