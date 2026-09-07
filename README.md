@@ -1109,4 +1109,33 @@ Based on the analysis, the business should:
 
 
 
+## Recommendation
+
+Based on the analysis, the following actions are recommended:
+
+-	Protect the strong performance of IT Gadgets by maintaining adequate inventory, monitoring profitability, and identifying the factors driving its high demand. 
+-	Diversify product category performance by developing lower-performing categories such as Office Supplies and Furniture to reduce excessive dependence on IT Gadgets. 
+-	Use historical sales trends for planning by aligning inventory, staffing, and promotional activities with periods of higher and lower demand. 
+-	Prioritize high-performing store formats, particularly Superstores and Express stores, while investigating the factors contributing to the weaker performance of Mall stores. 
+-	Strengthen digital sales channels by improving Online and Click and Collect experiences while maintaining the strong performance of In Store sales. 
+-	Target key customer segments based on age-group performance, while developing strategies to increase engagement among younger customers. 
+-	Improve data completeness and monitoring, particularly for customer age information and incomplete periods such as August 2026, to support more reliable future analysis. 
+-	Monitor Net Sales and Gross Profit together when evaluating business performance to ensure that revenue growth is supported by sustainable profitability.
+  
+
+## Conclusion
+
+The analysis provides a clear view of the business's product, time, store, sales channel, and customer performance. IT Gadgets emerged as the dominant product category, while Superstores were the strongest-performing store type. In Store sales generated the largest share of Net Sales, and customers across the 35–64 age range represented the strongest contributing age groups.
+The analysis also identified recurring fluctuations in performance over time, highlighting the importance of effective forecasting, inventory planning, and promotional strategies. Although the business demonstrates strong overall performance, the concentration of sales in IT Gadgets and In Store transactions presents an opportunity to diversify revenue and strengthen weaker areas.
+Overall, the findings provide a data-driven foundation for improving inventory management, sales strategy, store performance, customer targeting, and revenue diversification, enabling the business to make more informed decisions and support sustainable growth.
+
+
+Thank You for Reading
+
+I am interested in a Data Analyst role in an organization where I can showcase my skills, take more responsibilities, continue to learn, an organization that I can grow with, where my work will be highly beneficial to the organization.
+You can reach me on asoredamiloladorcas@gmail.com 
+
+
+
+
 
