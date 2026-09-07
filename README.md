@@ -932,6 +932,11 @@ This question examines the movement of Net Sales from 2022 to 2026 to determine 
 
 
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/GROSS%20PROFIT%20TREND%20OVER%20TIME.png)
+
+
+
+
 
 
 
