@@ -773,6 +773,7 @@ These KPIs were supported by calculated transaction-level fields:
 ##### Calculated Gross Sales: It represents the total sales value before discounts are applied. It is calculated at the individual order-item level using Quantity and Unit Price.
 
 *DAX*
+
 ```Calculated Gross Sales = 'ORDER ITEMS'[Quantity] * 'ORDER ITEMS'[Unit Price]```
 
 *Business Interpretation:* Gross Sales shows the value of products sold before considering discounts. It provides the starting point for calculating Net Sales.
@@ -780,11 +781,13 @@ These KPIs were supported by calculated transaction-level fields:
 ##### Calculated Discount Amount: It determines the monetary value of the discount applied to each order item.
 
  *DAX*
+ 
 ```Calculated Discount Amount = 'ORDER ITEMS'[Calculated Gross Sales] * 'ORDER ITEMS'[Discount Percentage]```
 
 ##### Calculated Net Sales: It represents the actual sales value after discounts have been deducted from Gross Sales.
 
 *DAX*
+
 ```Calculated Net Sales = 'ORDER ITEMS'[Calculated Gross Sales]  - 'ORDER ITEMS'[Calculated Discount Amount]```
 
 *Business Interpretation:* Net Sales is the primary revenue measure used for the dashboard. It represents the value retained from sales after applying discounts.
@@ -792,6 +795,7 @@ These KPIs were supported by calculated transaction-level fields:
 ##### Calculated Total Cost: It determines the total product cost associated with each order-item transaction.
 
 *DAX*
+
 ```Calculated Total Cost = 'ORDER ITEMS'[Quantity] * 'ORDER ITEMS'[Unit Cost]```
 
 *Business Interpretation:* This measure represents the direct product cost associated with the units sold. It is required to calculate Gross Profit.
@@ -801,6 +805,7 @@ These KPIs were supported by calculated transaction-level fields:
 - Total Net Sales: measures the total value of sales after the removal of discounts across the selected reporting period.
 
 *DAX*
+
 ```Total Net Sales = SUM('ORDER ITEMS'[Calculated Net Sales])```
 
 *Dashboard Use:* This measure was used as the primary Net Sales KPI card.
@@ -810,6 +815,7 @@ These KPIs were supported by calculated transaction-level fields:
 - Total Cost: Total Cost measures the total direct cost of the products sold.
 
 *DAX*
+
 ```Total Cost = SUM('ORDER ITEMS'[Calculated Total Cost])```
 
 *Dashboard Use:* Total Cost was displayed as a financial KPI alongside Net Sales.
@@ -819,6 +825,7 @@ These KPIs were supported by calculated transaction-level fields:
 - Gross Profit:measures the amount remaining after the direct product cost has been deducted from Net Sales.
 
 *DAX*
+
 ```Gross Profit = [Total Net Sales] - [Total Cost]```
 
 
@@ -829,11 +836,13 @@ These KPIs were supported by calculated transaction-level fields:
 - Gross Profit Margin: measures the percentage of Net Sales retained as Gross Profit. Unlike Gross Profit, which is expressed as a monetary amount, Gross Profit Margin is expressed as a percentage.
 
 *DAX*
+
  ```Gross Profit% = DIVIDE([Gross Profit],[Total Net Sales],0)```
 
 -Total Orders: measures the number of unique customer orders recorded in the dataset. It is an operational KPI that helps measure transaction volume and customer purchasing activity.
 
 *DAX* 
+
 ```Total Orders = DISTINCTCOUNT('ORDERS'[Order ID])```
 
 DISTINCTCOUNT() is used instead of COUNT() because an Order ID can appear multiple times in the ORDER ITEMS table when an order contains multiple products.
@@ -845,6 +854,7 @@ An increase in Total Orders can indicate: More customers making purchases, Exist
 - Total Units Sold: measures the total number of individual product units purchased across all order-item transactions.
 
 *DAX*
+
 ```Units Sold = SUM('ORDER ITEMS'[Quantity])```
 
 *Business Interpretation: * Units Sold measures the physical volume of products sold. It can be used to understand Product demand, Sales volume, Inventory movement, Category performance, Store performance and Product popularity. A product can generate many units sold while producing relatively low revenue if its selling price is low.
@@ -852,12 +862,14 @@ An increase in Total Orders can indicate: More customers making purchases, Exist
 - Average Order Value (AOV):  measures the average amount of Net Sales generated per order.
 
 *DAX*
+
 ```Average Order Value = DIVIDE([Total Net Sales], [Total Orders],0)```
 
 *Business Interpretation:* AOV helps determine how much revenue the business generates per transaction. It can be used to evaluate	Customer spending behavior, Promotional effectiveness, Cross-selling opportunities, Upselling opportunities, Store performance, Sales channel performance
 
  - Units per Order
 *DAX*
+
 ```Units Per Order = DIVIDE([Units Sold],[Total Orders],0)```
 
 ##	Data Analysis and Insight
@@ -874,8 +886,37 @@ This question seeks to identify which product categories contribute the most to 
 Understanding category performance helps the business identify the products that generate the greatest customer demand and financial value. Net Sales measures revenue generated after discounts, Units Sold measures the quantity of products sold, while Gross Profit measures the amount remaining after direct product costs.
 The analysis also compares category performance across store types to determine whether different store formats have different product preferences.
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20BY%20PRODUCT%20CATEGORY%20AND%20STORE%20TYPE.png)
 
 
+
+##### From the analysis above:
+The analysis of product category performance shows that IT Gadgets is the strongest-performing category across all three key measures: Net Sales, Units Sold, and Gross Profit. It significantly outperformed the other product categories, while Office Supplies recorded the lowest overall contribution.
+- IT Gadgets: IT Gadgets was the dominant product category, generating approximately $273 million in Net Sales, 244,803 Units Sold, and $52 million in Gross Profit. Its leading position across all three measures indicates strong customer demand as well as a substantial contribution to overall business profitability.
+- Electronics: Electronics ranked second, generating approximately $20 million in Net Sales, 18,895 Units Sold, and $4 million in Gross Profit. Although its performance was considerably lower than IT Gadgets, it remained the second-largest contributor across the three measures.
+- Home & Kitchen: Home & Kitchen generated approximately $12 million in Net Sales, with 10,902 Units Sold and approximately $3 million in Gross Profit. The category made a moderate contribution to overall business performance and ranked third across the key measures.
+- Sports & Outdoors: Sports & Outdoors recorded approximately $10 million in Net Sales, 7,340 Units Sold, and $2 million in Gross Profit. Its performance was below Home & Kitchen but remained ahead of the remaining categories.
+- Furniture: Furniture generated approximately $5 million in Net Sales, with 5,036 Units Sold and approximately $1 million in Gross Profit. This indicates a relatively smaller contribution to overall sales and profitability.
+- Office Supplies: Office Supplies was the lowest-performing category, generating approximately $4 million in Net Sales, 4,430 Units Sold, and approximately $1 million in Gross Profit. Its lower contribution suggests an opportunity to investigate demand, pricing, product assortment, and other factors affecting its performance.
+  
+**Store Type Comparison:** The same general category ranking was observed across the different store types, with IT Gadgets consistently remaining the leading category. This indicates that the strong performance of IT Gadgets is not restricted to a particular store format.
+
+**Overall Finding**
+Overall, the analysis indicates that IT Gadgets is the dominant product category in the business, leading significantly in Net Sales, Units Sold, and Gross Profit. Its consistent performance across different store types suggests that demand for the category is broad rather than being concentrated in a specific store format.
+However, the substantial gap between IT Gadgets and the other categories also indicates a high concentration of sales and profit within one category. While this strong performance is beneficial, excessive dependence on a single category could expose the business to greater risk if demand changes, competition increases, or supply issues affect the category.
+The business should therefore continue protecting the strong performance of IT Gadgets while identifying opportunities to increase the contribution of lower-performing categories.
+
+**Business Recommendation**
+Based on the analysis, the business should:
+-	Maintain adequate IT Gadgets inventory to minimize the risk of stockouts and lost sales. 
+-	Monitor pricing and profitability to ensure the category's strong sales translate into sustainable profit. 
+-	Identify the key factors driving IT Gadgets demand, such as customer preferences, product assortment, pricing, and availability. 
+-	Apply successful practices from IT Gadgets to improve the performance of weaker categories where appropriate. 
+-	Develop lower-performing categories to diversify revenue and reduce excessive dependence on IT Gadgets. 
+-	Continue monitoring category performance across store types to identify whether specific categories have growth opportunities within particular store formats. 
+
+**2.	What are the trends in Units Sold, Net Sales, and Gross Profit over time?**
+This question examines the movement of Net Sales from 2022 to 2026 to determine the overall sales trend and identify periods of growth or decline. Analyzing sales over time helps the business understand whether revenue is growing consistently and identify periods that may require further investigation.
 
 
 
