@@ -980,6 +980,8 @@ Based on the analysis, the business should:
 -	Review the August 2026 decline once complete data is available before making major business decisions based on the current figure. 
 -	Use targeted promotions and inventory strategies during weaker periods to improve consistency in monthly performance.
 
+
+
   
 
 **3.	Which store types contribute the most to overall business performance?**
@@ -988,6 +990,41 @@ This analysis evaluates the performance of different store types based on Net Sa
 
 
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%203.png)
+
+
+
+
+
+
+##### From the analysis above:
+
+- The analysis shows that Superstores are the strongest-performing store type across all three key measures. Superstores generated approximately $69.85M in Net Sales, 62,442 Units Sold, and $13.56M in Gross Profit.
+- Express stores ranked second, generating approximately $62.19M in Net Sales, 56,474 Units Sold, and $12.11M in Gross Profit, followed by Outlet stores with $54.23M in Net Sales, 48,583 Units Sold, and $10.38M in Gross Profit.
+- Flagship stores generated approximately $53.46M in Net Sales, 47,448 Units Sold, and $10.28M in Gross Profit, while Warehouse stores recorded $49.76M in Net Sales, 44,559 Units Sold, and $9.58M in Gross Profit.
+- Mall stores recorded the lowest performance across all three measures, with approximately $35.52M in Net Sales, 31,900 Units Sold, and $6.84M in Gross Profit.
+- The ranking is consistent across Net Sales, Units Sold, and Gross Profit, with Superstores performing highest and Mall stores performing lowest.
+  
+**Overall Finding**
+
+Overall, Superstores are the main contributor to store-type performance, while Mall stores make the smallest contribution. The consistent ranking across all three measures indicates that higher sales volumes are translating into higher revenue and profitability across the store types.
+
+**Business Recommendation**
+
+Based on the analysis, the business should:
+-	Maintain and strengthen Superstore performance through adequate inventory and operational capacity. 
+-	Identify successful practices in Superstores and Express stores that could be applied to weaker store formats. 
+-	Investigate the lower performance of Mall stores to understand whether customer traffic, product mix, location, or pricing is affecting results. 
+-	Use Net Sales, Units Sold, and Gross Profit together when evaluating store performance and making resource-allocation decisions. 
+-	Prioritize high-performing store formats for future investment while developing strategies to improve weaker formats. 
+
+
+
+
+
+**4.	How do sales channels and customer age groups contribute to Net Sales?**
+
+This analysis examines Net Sales across different sales channels and customer age groups to understand where revenue is being generated and which customer segments contribute most to overall sales.
 
 
 
