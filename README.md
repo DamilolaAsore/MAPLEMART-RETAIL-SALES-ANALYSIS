@@ -772,63 +772,76 @@ These KPIs were supported by calculated transaction-level fields:
 
 ##### Calculated Gross Sales: It represents the total sales value before discounts are applied. It is calculated at the individual order-item level using Quantity and Unit Price.
 
-##### DAX
-```Calculated Gross Sales = 'ORDER ITEMS'[Quantity] *'ORDER ITEMS'[Unit Price]```
+*DAX*
+```Calculated Gross Sales = 'ORDER ITEMS'[Quantity] * 'ORDER ITEMS'[Unit Price]```
 
-- Business Interpretation: Gross Sales shows the value of products sold before considering discounts. It provides the starting point for calculating Net Sales.
+*Business Interpretation:* Gross Sales shows the value of products sold before considering discounts. It provides the starting point for calculating Net Sales.
 
 ##### Calculated Discount Amount: It determines the monetary value of the discount applied to each order item.
 
-##### DAX
-
+ *DAX*
 ```Calculated Discount Amount = 'ORDER ITEMS'[Calculated Gross Sales] * 'ORDER ITEMS'[Discount Percentage]```
 
 ##### Calculated Net Sales: It represents the actual sales value after discounts have been deducted from Gross Sales.
 
-##### DAX
-
+*DAX*
 ```Calculated Net Sales = 'ORDER ITEMS'[Calculated Gross Sales]  - 'ORDER ITEMS'[Calculated Discount Amount]```
 
-- Business Interpretation: Net Sales is the primary revenue measure used for the dashboard. It represents the value retained from sales after applying discounts.
+*Business Interpretation:* Net Sales is the primary revenue measure used for the dashboard. It represents the value retained from sales after applying discounts.
 
 ##### Calculated Total Cost: It determines the total product cost associated with each order-item transaction.
 
-##### DAX
-
+*DAX*
 ```Calculated Total Cost = 'ORDER ITEMS'[Quantity] * 'ORDER ITEMS'[Unit Cost]```
 
-- Business Interpretation: This measure represents the direct product cost associated with the units sold. It is required to calculate Gross Profit.
+*Business Interpretation:* This measure represents the direct product cost associated with the units sold. It is required to calculate Gross Profit.
 
- ##### KPI
+ ##### KPIs
+ 
 - Total Net Sales: measures the total value of sales after the removal of discounts across the selected reporting period.
 
-##### DAX
-
+*DAX*
 ```Total Net Sales = SUM('ORDER ITEMS'[Calculated Net Sales])```
 
-##### Dashboard Use: This measure was used as the primary Net Sales KPI card.
+*Dashboard Use:* This measure was used as the primary Net Sales KPI card.
 
-##### Interpretation: A higher Net Sales value indicates greater revenue generated after discounts.
+*Interpretation:* A higher Net Sales value indicates greater revenue generated after discounts.
 
 - Total Cost: Total Cost measures the total direct cost of the products sold.
 
-##### DAX
-
+*DAX*
 ```Total Cost = SUM('ORDER ITEMS'[Calculated Total Cost])```
 
-##### Dashboard Use: Total Cost was displayed as a financial KPI alongside Net Sales.
+*Dashboard Use:* Total Cost was displayed as a financial KPI alongside Net Sales.
 
-##### Interpretation: This KPI shows how much was spent on the products associated with the recorded sales transactions. An increase in cost without a corresponding increase in Net Sales can reduce profitability.
+*Interpretation:* This KPI shows how much was spent on the products associated with the recorded sales transactions. An increase in cost without a corresponding increase in Net Sales can reduce profitability.
 
-- Gross Profit KPI: Gross Profit measures the amount remaining after the direct product cost has been deducted from Net Sales.
+- Gross Profit:measures the amount remaining after the direct product cost has been deducted from Net Sales.
 
-##### DAX
+*DAX*
+```Gross Profit = [Total Net Sales] - [Total Cost]```
 
-```Gross Profit = [Total Net Sales]-[Total Cost]```
 
-##### Dashboard Use: Gross Profit was displayed as one of the major financial KPI cards.
+ *Dashboard Use:* Gross Profit was displayed as one of the major financial KPI cards.
 
-##### Interpretation: Gross Profit indicates how much revenue remains after covering the direct cost of the products sold. A positive Gross Profit indicates that Net Sales exceeded direct product costs.
+*Interpretation:* Gross Profit indicates how much revenue remains after covering the direct cost of the products sold. A positive Gross Profit indicates that Net Sales exceeded direct product costs.
+
+- Gross Profit Margin: measures the percentage of Net Sales retained as Gross Profit. Unlike Gross Profit, which is expressed as a monetary amount, Gross Profit Margin is expressed as a percentage.
+
+*DAX*
+ ```Gross Profit% = DIVIDE([Gross Profit],[Total Net Sales],0)```
+
+-Total Orders: measures the number of unique customer orders recorded in the dataset. It is an operational KPI that helps measure transaction volume and customer purchasing activity.
+
+*DAX* 
+```Total Orders = DISTINCTCOUNT('ORDERS'[Order ID])```
+
+DISTINCTCOUNT() is used instead of COUNT() because an Order ID can appear multiple times in the ORDER ITEMS table when an order contains multiple products.
+
+*Business Interpretation*
+
+Total Orders indicates the volume of transactions generated by the business.
+An increase in Total Orders can indicate: More customers making purchases, Existing customers placing more orders, Increased purchasing activity, Successful sales campaigns, Increased store or online activity. However, Total Orders should be interpreted alongside Net Sales because a high number of orders does not necessarily mean high revenue.
 
 
 
