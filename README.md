@@ -890,6 +890,10 @@ The analysis also compares category performance across store types to determine 
 
 
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%201B.png)
+
+
+
 ##### From the analysis above:
 The analysis of product category performance shows that IT Gadgets is the strongest-performing category across all three key measures: Net Sales, Units Sold, and Gross Profit. It significantly outperformed the other product categories, while Office Supplies recorded the lowest overall contribution.
 - IT Gadgets: IT Gadgets was the dominant product category, generating approximately $273 million in Net Sales, 244,803 Units Sold, and $52 million in Gross Profit. Its leading position across all three measures indicates strong customer demand as well as a substantial contribution to overall business profitability.
