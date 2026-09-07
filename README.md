@@ -1029,3 +1029,44 @@ This analysis examines Net Sales across different sales channels and customer ag
 
 
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%204.png)
+
+
+
+
+
+##### From the analysis above:
+
+- The analysis shows that In Store is the strongest-performing sales channel, generating approximately $178.59M in Net Sales, followed by Online at $97.04M and Click and Collect at $49.39M. This indicates that physical store purchases remain the primary source of revenue.
+- Across customer age groups, customers aged 35–44 generated the highest Net Sales at approximately $62.60M, closely followed by 55–64 at $64.07M. Customers aged 25–34 generated approximately $59.96M, while 45–54 contributed $58.54M.
+- The 18–24 age group generated the lowest Net Sales among the identified age groups at approximately $39.95M. Customers with an Unknown Age accounted for an additional $6.32M in Net Sales.
+  
+**Overall Finding**
+
+Overall, In Store sales are the dominant revenue channel, generating substantially more Net Sales than Online and Click and Collect. Customer sales are more evenly distributed across the established age groups, with 55–64 and 35–44 contributing the highest Net Sales.
+The relatively lower contribution from younger customers, particularly the 18–24 group, suggests an opportunity to investigate strategies for increasing engagement within this segment.
+
+**Business Recommendation**
+
+Based on the analysis, the business should:
+-	Maintain strong In Store operations while continuing to improve Online and Click and Collect channels. 
+-	Develop targeted marketing strategies for high-value age groups, particularly customers aged 35–44 and 55–64. 
+-	Explore ways to increase engagement among younger customers, especially the 18–24 age group. 
+-	Improve customer data completeness to reduce the $6.32M in Net Sales associated with Unknown Age. 
+-	Strengthen online and Click and Collect offerings to diversify revenue beyond physical store 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
