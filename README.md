@@ -1060,12 +1060,50 @@ Based on the analysis, the business should:
 
 ##	Data Visualization
 
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20BY%20PRODUCT%20CATEGORY%20AND%20STORE%20TYPE.png)
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%201B.png)
 
 
 
 
 
 
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20TREND%20OVER%20TIME.png)
+
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/GROSS%20PROFIT%20TREND%20OVER%20TIME.png)
+
+
+
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/UNITS%20SOLD%20TREND%20OVER%20TIME.png)
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%203.png)
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%204.png)
 
 
 
