@@ -1060,8 +1060,7 @@ Based on the analysis, the business should:
 
 ##	Data Visualization
 
-![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20BY%20PRODUCT%20CATEGORY%20AND%20STORE%20TYPE.png)
-
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/DASHBOARD.png)
 
 
 
