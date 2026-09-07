@@ -890,7 +890,11 @@ The analysis also compares category performance across store types to determine 
 
 
 
+
+
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/ANALYSIS%201B.png)
+
+
 
 
 
@@ -923,7 +927,7 @@ Based on the analysis, the business should:
 This question examines the movement of Net Sales from 2022 to 2026 to determine the overall sales trend and identify periods of growth or decline. Analyzing sales over time helps the business understand whether revenue is growing consistently and identify periods that may require further investigation.
 
 
-
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20TREND%20OVER%20TIME.png)
 
 
 
