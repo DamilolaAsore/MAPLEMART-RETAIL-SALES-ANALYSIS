@@ -921,10 +921,14 @@ Based on the analysis, the business should:
 -	Identify the key factors driving IT Gadgets demand, such as customer preferences, product assortment, pricing, and availability. 
 -	Apply successful practices from IT Gadgets to improve the performance of weaker categories where appropriate. 
 -	Develop lower-performing categories to diversify revenue and reduce excessive dependence on IT Gadgets. 
--	Continue monitoring category performance across store types to identify whether specific categories have growth opportunities within particular store formats. 
+-	Continue monitoring category performance across store types to identify whether specific categories have growth opportunities within particular store formats.
+
+  
 
 **2.	What are the trends in Units Sold, Net Sales, and Gross Profit over time?**
 This question examines the movement of Net Sales from 2022 to 2026 to determine the overall sales trend and identify periods of growth or decline. Analyzing sales over time helps the business understand whether revenue is growing consistently and identify periods that may require further investigation.
+
+
 
 
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/NET%20SALES%20TREND%20OVER%20TIME.png)
@@ -932,8 +936,54 @@ This question examines the movement of Net Sales from 2022 to 2026 to determine 
 
 
 
+
+
 ![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/GROSS%20PROFIT%20TREND%20OVER%20TIME.png)
 
+
+
+
+
+
+
+
+![](https://github.com/DamilolaAsore/MAPLEMART-RETAIL-SALES-ANALYSIS/blob/main/MAPLEMART%20GITHUB%20IMAGES/UNITS%20SOLD%20TREND%20OVER%20TIME.png)
+
+
+
+
+
+
+
+
+
+##### From the analysis above:
+The analysis of performance over time shows that Units Sold, Net Sales, and Gross Profit generally follow similar patterns, with periods of growth and decline across the years. Overall, the business maintained relatively stable performance, although several months recorded notable peaks and declines.
+- 2022: The available data covers August to December. Performance increased steadily during this period, with Units Sold rising from 5,280 in August to 6,170 in December. Net Sales increased from approximately $5.81 million to $6.76 million, while Gross Profit rose from $1.15 million to a peak of $1.36 million in October before closing at $1.25 million.
+- 2023: Performance was more volatile, with Units Sold declining to 5,527 in June before recovering to 6,340 in August and 6,350 in October. Net Sales followed a similar pattern, reaching a yearly high of approximately $7.19 million in August. Gross Profit also peaked in August at approximately $1.40 million.
+- 2024: Performance remained relatively stable, with notable peaks in February and August. Units Sold reached 6,416 in February and 6,607 in August, while Net Sales reached approximately $7.20 million in February and $7.30 million in August. Performance declined toward November, when Net Sales fell to approximately $6.30 million.
+- 2025: The year showed strong spring performance followed by a summer decline and a strong recovery toward year-end. Units Sold peaked at 6,589 in April, while Net Sales reached approximately $7.38 million. Performance weakened during August before recovering in December, when Net Sales reached approximately $7.30 million and Gross Profit reached $1.42 million.
+- 2026: Performance remained relatively consistent from January through July, with Net Sales ranging between approximately $6.49 million and $7.43 million. However, August recorded a sharp decline to 1,032 Units Sold, $1.21 million in Net Sales, and $0.23 million in Gross Profit. Since the 2026 data is incomplete, this decline is likely related to partial-month reporting or a data lag rather than an actual collapse in business performance.
+  
+**Overall Finding**
+
+Overall, the analysis indicates that the business experiences recurring fluctuations in sales and profitability, with stronger performance frequently occurring around February, April, and August. The close movement between Units Sold, Net Sales, and Gross Profit also indicates that changes in sales volume have a direct impact on revenue and profitability.
+The significant decline recorded in August 2026 should be treated cautiously because the year is incomplete. Further analysis should be conducted once the full month's data is available to determine whether the decline represents a genuine business trend or incomplete reporting.
+
+**Business Recommendation**
+
+Based on the analysis, the business should:
+-	Use historical monthly trends for sales forecasting and planning for periods of higher or lower demand. 
+-	Plan inventory and staffing around recurring peak periods to ensure sufficient capacity to meet customer demand. 
+- Investigate periods of significant decline to identify factors affecting sales and profitability. 
+-	Monitor Gross Profit alongside Net Sales to ensure revenue growth continues to translate into healthy profitability. 
+-	Review the August 2026 decline once complete data is available before making major business decisions based on the current figure. 
+-	Use targeted promotions and inventory strategies during weaker periods to improve consistency in monthly performance.
+
+  
+
+**3.	Which store types contribute the most to overall business performance?**
+This analysis evaluates the performance of different store types based on Net Sales, Units Sold, and Gross Profit. The objective is to identify the store formats making the strongest contribution to overall business performance and highlight areas requiring further attention.
 
 
 
