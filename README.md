@@ -423,6 +423,7 @@ The dataset contained methods including:
 -	Store Pickup
 -	UPS
   
+  
 These were retained as valid shipping methods because they represent different delivery/logistics options.
 Store Pickup was treated as a legitimate fulfilment method rather than a conventional courier service.
 
