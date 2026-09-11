@@ -1130,11 +1130,6 @@ The analysis also identified recurring fluctuations in performance over time, hi
 Overall, the findings provide a data-driven foundation for improving inventory management, sales strategy, store performance, customer targeting, and revenue diversification, enabling the business to make more informed decisions and support sustainable growth.
 
 
-Thank You for Reading
-
-I am interested in a Data Analyst role in an organization where I can showcase my skills, take more responsibilities, continue to learn, an organization that I can grow with, where my work will be highly beneficial to the organization.
-You can reach me on asoredamiloladorcas@gmail.com 
-
 
 
 
